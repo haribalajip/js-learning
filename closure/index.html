@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript">
+		var arr = [];
+		function greet(greetMessage) {
+			// body...
+			return function(name){
+				console.log(greetMessage + name);
+			}
+		}
+
+		var showName = greet('Hi ');
+		showName('hari');
+
+		/*example 2*/
+		var arr = [];
+		function functionBuilder () {
+			for (var i = 0; i < 3; i++) {
+				arr.push(
+					function () {
+						console.log(i);
+					}
+				);
+			}
+		}
+		functionBuilder();
+
+		arr[1]();
+		arr[2]();
+		arr[0]();
+
+	</script>
+</head>
+<body>Refer console</body>
+</html>

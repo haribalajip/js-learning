@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript">
+		var sen = ' this is a computer ';
+		var arr = [];
+		var res = '';
+		var str = '';
+
+		for (var i = 0; i < sen.length; i++) {
+			if(sen[i] != " "){
+				str += sen[i];
+				console.log(i);
+			} else if(sen[i] == " "){
+				arr.push(str);
+				str = '';
+			}
+		}
+
+		for (var i = arr.length - 1; i >= 0; i--) {
+			res += arr[i]+" ";
+		}
+
+		console.log(res);
+
+
+	</script>
+</head>
+<body>Refer console</body>
+</html>

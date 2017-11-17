@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>Refer console</body>
+	<script type="text/javascript">
+		var w = new Worker("demo.js");
+		w.onmessage = function (event) {
+			console.log(event.data);
+		}
+	</script>
+</html>
