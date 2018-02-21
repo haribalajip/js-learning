@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>File reader</h1>
+	<input type="file"/></body>
+	<script type="text/javascript" onchange="readFile(event)">
+		alert();
+		var openFile = function(event) {
+	    var input = event.target;
+
+	    var reader = new FileReader();
+	    reader.onload = function(){
+		      var text = reader.result;
+		      console.log(reader.result.substring(0, 200));
+		    };
+		    reader.readAsText(input.files[0]);
+		};
+
+	</script>
+
+</html>

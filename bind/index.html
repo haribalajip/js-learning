@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+	function multiply(a,b){
+		console.log(a*b);
+	}
+	//presetting the first param as 4
+	multiply = multiply.bind(this,4);
+	//providing the 2nd param as 2
+	multiply(2);
+
+</script>
+</head>
+<body>
+	<h2>Bind</h2>
+	<p>Creates a new function with the given 'this' value and presets the arguments when passed.</p>
+
+</body>
+</html>

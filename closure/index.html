@@ -2,35 +2,15 @@
 <html>
 <head>
 	<script type="text/javascript">
-		var arr = [];
-		function greet(greetMessage) {
-			// body...
-			return function(name){
-				console.log(greetMessage + name);
-			}
-		}
+		let greeter = name => message =>  console.log (name+" "+message);
+		let greet = greeter('hari');
+		greet(',welcome to the world!');
+		greet(', good morning!');
 
-		var showName = greet('Hi ');
-		showName('hari');
-
-		/*example 2*/
-		var arr = [];
-		function functionBuilder () {
-			for (var i = 0; i < 3; i++) {
-				arr.push(
-					function () {
-						console.log(i);
-					}
-				);
-			}
-		}
-		functionBuilder();
-
-		arr[1]();
-		arr[2]();
-		arr[0]();
 
 	</script>
 </head>
-<body>Refer console</body>
+<body>Refer console
+<p>Combination of function and the lexical environment within which the function was declared.</p>
+</body>
 </html>
